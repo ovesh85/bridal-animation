@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Naqsh Bridal Couture — every bride, stitched by hand</title>
+<meta name="description" content="Hand zardozi bridal lehengas, made from chalk to gold in our haveli atelier. Watch one being made, then book your trial.">
+<meta property="og:title" content="Naqsh Bridal Couture">
+<meta property="og:description" content="Every bride, stitched by hand.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta name="theme-color" content="#1b0a13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b0a13'/%3E%3Cpath d='M32 10c10 8 14 18 8 28-4 7-12 8-16 3-5-6 0-14 8-13' fill='none' stroke='%23cda455' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- Preloader: a chalk paisley that is stitched in gold as the film loads -->
+<div class="loader" id="loader" aria-hidden="true">
+  <svg class="loader__art" viewBox="0 0 200 240">
+    <path class="chalk" pathLength="1" d="M100 18c44 30 66 78 42 126-18 36-62 46-82 18-20-28 2-64 40-58 26 4 34 32 16 44"/>
+    <path class="gold" id="loaderGold" pathLength="1" d="M100 18c44 30 66 78 42 126-18 36-62 46-82 18-20-28 2-64 40-58 26 4 34 32 16 44"/>
+  </svg>
+  <p class="loader__word">नक़्श</p>
+  <p class="loader__pct"><span id="loaderPct">0</span>%</p>
+</div>
+
+<header class="hdr" id="hdr">
+  <a class="hdr__logo" href="#top" aria-label="Naqsh, back to top"><span class="hdr__lat">Naqsh</span><span class="hdr__dev">नक़्श</span></a>
+  <nav class="hdr__nav" aria-label="Main">
+    <a href="#making">The making</a>
+    <a href="#craft">Techniques</a>
+    <a href="#collection">Collection</a>
+    <a href="#journey">Your fittings</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="hdr__end">
+    <button class="hdr__saved" id="savedBtn" aria-label="Saved lehengas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span id="savedCount">0</span></button>
+    <a class="btn btn--gold hdr__cta" href="#trial">Book a trial</a>
+    <button class="hdr__menu" id="menuBtn" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+  <a href="#making">The making</a><a href="#craft">Techniques</a><a href="#collection">Collection</a><a href="#journey">Your fittings</a><a href="#visit">Visit</a><a href="#trial" class="btn btn--gold">Book a trial</a>
+</nav>
+
+<main id="top">
+
+<!-- ===== THE FILM ===== -->
+<section class="film" id="making" aria-label="How a Naqsh lehenga is made">
+  <div class="film__stage">
+    <canvas class="film__canvas" id="film" aria-hidden="true"></canvas>
+    <div class="film__shade"></div>
+
+    <div class="film__intro" id="filmIntro">
+      <p class="film__kicker">Hand zardozi bridal couture since 1971</p>
+      <h1 class="film__h1">Every bride,<br>stitched by hand.</h1>
+      <svg class="thread thread--intro" viewBox="0 0 600 24" preserveAspectRatio="none" aria-hidden="true">
+        <path class="thread__chalk" d="M4 14 C120 2, 220 22, 320 12 S500 4, 596 12"/>
+        <path class="thread__gold" id="introThread" pathLength="1" d="M4 14 C120 2, 220 22, 320 12 S500 4, 596 12"/>
+      </svg>
+      <p class="film__cue">Scroll to watch one lehenga go from chalk to gold</p>
+    </div>
+
+    <ol class="rail" id="rail" aria-label="Chapters">
+      <li data-ch="1"><button><span class="rail__dev">खाका</span><span class="rail__lat">Khaka</span></button></li>
+      <li data-ch="2"><button><span class="rail__dev">ज़रदोज़ी</span><span class="rail__lat">Zardozi</span></button></li>
+      <li data-ch="3"><button><span class="rail__dev">कटाई</span><span class="rail__lat">Cutting</span></button></li>
+      <li data-ch="4"><button><span class="rail__dev">सिलाई</span><span class="rail__lat">Tailoring</span></button></li>
+      <li data-ch="5"><button><span class="rail__dev">लिबास</span><span class="rail__lat">The form</span></button></li>
+      <li data-ch="6"><button><span class="rail__dev">हवेली</span><span class="rail__lat">Showroom</span></button></li>
+    </ol>
+    <div class="rail__thread" aria-hidden="true"><i id="railGold"></i></div>
+
+    <div class="chap" id="chap" aria-live="polite">
+      <p class="chap__n"><span id="chapN">01</span> of 06</p>
+      <h2 class="chap__t" id="chapT">It begins as chalk.</h2>
+      <p class="chap__p" id="chapP"></p>
+      <div class="chap__cta" id="chapCta">
+        <a class="btn btn--gold" href="#trial">Book a trial</a>
+        <a class="btn btn--ghost" href="#collection">See the collection</a>
+      </div>
+    </div>
+
+    <dl class="gauge" id="gauge">
+      <div><dt>Hours at the adda</dt><dd id="gHours">0</dd></div>
+      <div><dt>Stitches of gold</dt><dd id="gStitch">0</dd></div>
+    </dl>
+
+    <div class="film__progress" aria-hidden="true">
+      <svg viewBox="0 0 1000 10" preserveAspectRatio="none">
+        <line class="thread__chalk" x1="0" y1="5" x2="1000" y2="5"/>
+        <line class="thread__gold" id="filmThread" pathLength="1" x1="0" y1="5" x2="1000" y2="5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATEMENT ===== -->
+<section class="statement sec--dark">
+  <p class="statement__dev" aria-hidden="true">हाथ का काम</p>
+  <p class="statement__txt" id="statement">Forty-one karigars sit at our addas. No machine ever touches the gold. One bride’s lehenga takes three months, and every stitch can be traced back to a pair of hands.</p>
+  <dl class="stats">
+    <div><dt>Karigars in the atelier</dt><dd data-count="41">0</dd></div>
+    <div><dt>Hours in a bridal lehenga</dt><dd data-count="640">0</dd></div>
+    <div><dt>Brides dressed since 1971</dt><dd data-count="6200" data-fmt="in">0</dd></div>
+  </dl>
+</section>
+
+<!-- ===== TECHNIQUES ===== -->
+<section class="craft sec--light" id="craft">
+  <div class="sec__head">
+    <h2 class="sec__h">Four ways to lay gold</h2>
+    <p class="sec__lede">Zardozi is not one stitch. Our karigars move between four techniques on a single kali. Tap one to see it up close.</p>
+  </div>
+  <div class="acc" id="acc">
+    <article class="acc__item is-open" tabindex="0" data-i="0">
+      <img src="assets/img/m1.webp" alt="Macro of gold dabka coils couched in paisley lines on crimson silk" loading="lazy">
+      <div class="acc__body">
+        <p class="acc__dev">दबका</p>
+        <h3>Dabka</h3>
+        <p>A fine gold wire wound into a tight spring, cut and couched in curls. It gives the raised, rope-like outline you can feel with a fingertip.</p>
+        <p class="acc__use">Used for paisley outlines and vines</p>
+      </div>
+    </article>
+    <article class="acc__item" tabindex="0" data-i="1">
+      <img src="assets/img/m2.webp" alt="Macro of overlapping gold sitara sequins on crimson silk" loading="lazy">
+      <div class="acc__body">
+        <p class="acc__dev">सितारा</p>
+        <h3>Sitara</h3>
+        <p>Flat gold sequins laid like fish scales, each held with a tiny bead. They catch light from every angle as the bride walks.</p>
+        <p class="acc__use">Used for fills and the hem border</p>
+      </div>
+    </article>
+    <article class="acc__item" tabindex="0" data-i="2">
+      <img src="assets/img/m3.webp" alt="Macro of smooth gold salma wire filling a lotus petal" loading="lazy">
+      <div class="acc__body">
+        <p class="acc__dev">सलमा</p>
+        <h3>Salma &amp; nakshi</h3>
+        <p>Smooth, hollow gold tubes cut to length and laid side by side to fill a petal, then outlined with twisted nakshi thread.</p>
+        <p class="acc__use">Used for lotus petals and leaves</p>
+      </div>
+    </article>
+    <article class="acc__item" tabindex="0" data-i="3">
+      <img src="assets/img/m4.webp" alt="Macro of kundan stones ringed with seed pearls" loading="lazy">
+      <div class="acc__body">
+        <p class="acc__dev">कुंदन</p>
+        <h3>Kundan &amp; moti</h3>
+        <p>Flat-cut glass stones in gold settings, ringed with seed pearls. Placed last, so the centre of every medallion has a jewel.</p>
+        <p class="acc__use">Used for medallion centres</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== COLLECTION ===== -->
+<section class="coll sec--dark" id="collection">
+  <div class="sec__head">
+    <h2 class="sec__h">The 2026 bridal edit</h2>
+    <p class="sec__lede">Four lehengas, each made once in this exact form and then remade to your measure. The gold bar under each piece shows its hours of handwork.</p>
+    <div class="chips" role="group" aria-label="Filter by occasion">
+      <button class="chip is-on" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="wedding" aria-pressed="false">Wedding</button>
+      <button class="chip" data-f="reception" aria-pressed="false">Reception</button>
+      <button class="chip" data-f="sangeet" aria-pressed="false">Sangeet</button>
+      <button class="chip" data-f="day" aria-pressed="false">Day wedding</button>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- ===== KARIGAR ===== -->
+<section class="karigar sec--plum" id="karigar">
+  <figure class="karigar__fig">
+    <img src="assets/img/artisan.webp" alt="Ustad Rafiq Ahmed working gold thread into crimson silk at his adda" loading="lazy">
+  </figure>
+  <div class="karigar__txt">
+    <p class="karigar__dev" aria-hidden="true">उस्ताद</p>
+    <blockquote>
+      <p>“The chalk tells you where to go. The gold tells you if you were honest.”</p>
+      <footer>Ustad Rafiq Ahmed, master karigar, 52 years at the adda</footer>
+    </blockquote>
+    <p class="karigar__p">Rafiq learned zardozi from his father at eleven. Today he draws every khaka we use and trains the eight apprentices who join us each year. When your lehenga is finished, he signs the inside of the waistband in gold thread.</p>
+  </div>
+</section>
+
+<!-- ===== JOURNEY ===== -->
+<section class="journey sec--light" id="journey">
+  <div class="sec__head">
+    <h2 class="sec__h">From first visit to vidaai</h2>
+    <p class="sec__lede">Plan for fourteen weeks. Here is what happens in each of them.</p>
+  </div>
+  <div class="tl">
+    <svg class="tl__thread" viewBox="0 0 1000 20" preserveAspectRatio="none" aria-hidden="true">
+      <path class="thread__chalk thread__chalk--ink" d="M0 10 C200 2, 300 18, 500 10 S800 2, 1000 10"/>
+      <path class="thread__gold" id="tlThread" pathLength="1" d="M0 10 C200 2, 300 18, 500 10 S800 2, 1000 10"/>
+    </svg>
+    <ol class="tl__steps">
+      <li><p class="tl__wk">Week 0</p><h3>Consultation</h3><p>Ninety minutes in the haveli. We try on silhouettes, talk colours and take 26 measurements.</p></li>
+      <li><p class="tl__wk">Weeks 1–2</p><h3>Your khaka</h3><p>Rafiq draws your motif on paper. You approve the sketch, the silk swatch and the gold tone.</p></li>
+      <li><p class="tl__wk">Weeks 6, 10, 13</p><h3>Three trials</h3><p>A toile, then the embroidered kalis, then the finished lehenga with dupatta and latkans.</p></li>
+      <li><p class="tl__wk">Week 14</p><h3>Delivered</h3><p>Steamed, wrapped in muslin and boxed in our trunk, with Rafiq’s signature in the waistband.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== TRIAL BOOKING ===== -->
+<section class="trial sec--dark" id="trial">
+  <figure class="trial__fig">
+    <img src="assets/img/fitting.webp" alt="A bride on a pedestal in front of a gilded mirror while a tailor pins her dupatta" loading="lazy">
+  </figure>
+  <div class="trial__box">
+    <h2 class="sec__h">Book your first trial</h2>
+    <p class="sec__lede">Consultations are free and last ninety minutes. Bring your mother, your sister, or nobody at all.</p>
+    <form class="form" id="form" novalidate>
+      <div class="f2">
+        <label class="fld"><span>Your name</span><input name="name" id="fName" autocomplete="name" required></label>
+        <label class="fld"><span>Phone</span><input name="phone" id="fPhone" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile" required></label>
+      </div>
+      <div class="f2">
+        <label class="fld"><span>Wedding date</span><input type="date" name="wedding" id="fWed" required></label>
+        <label class="fld"><span>Lehenga you liked</span>
+          <select name="look" id="fLook"><option value="">Not sure yet</option></select>
+        </label>
+      </div>
+      <fieldset class="fld slots">
+        <legend>Pick a visit</legend>
+        <div class="slots__days" id="days" role="radiogroup" aria-label="Day"></div>
+        <div class="slots__times" id="times" role="radiogroup" aria-label="Time">
+          <label><input type="radio" name="time" value="11:00" checked><span>11:00</span></label>
+          <label><input type="radio" name="time" value="14:00"><span>14:00</span></label>
+          <label><input type="radio" name="time" value="17:30"><span>17:30</span></label>
+        </div>
+      </fieldset>
+      <p class="form__err" id="formErr" role="alert"></p>
+      <button class="btn btn--gold btn--wide" type="submit">Book my trial</button>
+      <p class="form__note">We’ll call to confirm within a day. Demo form, nothing is sent.</p>
+    </form>
+    <div class="done" id="done" hidden>
+      <p class="done__dev" aria-hidden="true">शुक्रिया</p>
+      <h3 id="doneT">Your trial is booked.</h3>
+      <p id="doneP"></p>
+      <button class="btn btn--ghost" id="doneAgain" type="button">Book another visit</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISIT ===== -->
+<section class="visit" id="visit">
+  <picture class="visit__bg">
+    <source media="(max-width: 760px)" srcset="assets/img/haveli-m.webp">
+    <img src="assets/img/haveli.webp" alt="The Naqsh haveli at dusk with its arched doors open and lehengas inside" loading="lazy">
+  </picture>
+  <div class="visit__card">
+    <h2 class="sec__h">Come to the haveli</h2>
+    <p>Haveli No. 7, Zari Gali, Old City</p>
+    <dl class="visit__dl">
+      <div><dt>Open</dt><dd>Wednesday to Monday, 11:00 to 20:00</dd></div>
+      <div><dt>Closed</dt><dd>Tuesdays, when the karigars rest</dd></div>
+      <div><dt>Private viewings</dt><dd>After 20:00, on request</dd></div>
+    </dl>
+    <a class="btn btn--gold" href="#trial">Book a trial</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <p class="ftr__word" aria-hidden="true">नक़्श</p>
+  <div class="ftr__row">
+    <p>Naqsh Bridal Couture. Hand zardozi since 1971.</p>
+    <nav aria-label="Footer"><a href="#making">The making</a><a href="#collection">Collection</a><a href="#trial">Book a trial</a><a href="#visit">Visit</a></nav>
+  </div>
+  <p class="ftr__fine">Demo website. Naqsh, its people, address and prices are fictional. Images are AI-generated.</p>
+</footer>
+
+<!-- Lehenga detail sheet -->
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="shT" hidden>
+  <div class="sheet__scrim" data-close></div>
+  <div class="sheet__panel">
+    <button class="sheet__x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <img class="sheet__img" id="shImg" alt="">
+    <div class="sheet__body">
+      <p class="sheet__dev" id="shDev"></p>
+      <h3 id="shT"></h3>
+      <p class="sheet__price" id="shPrice"></p>
+      <p id="shDesc"></p>
+      <dl class="sheet__dl" id="shDl"></dl>
+      <div class="sheet__act">
+        <button class="btn btn--gold" id="shBook">Book a trial for this</button>
+        <button class="btn btn--ghost" id="shSave">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
